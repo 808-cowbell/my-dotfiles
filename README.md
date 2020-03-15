@@ -5,3 +5,5 @@ The ``i3`` folder contains configuration files for the i3 window manager to be m
 The ``i3status`` folder contains settings for i3status to be moved to ``~/.config/``.
 
 The ``neofetch`` folder contains my custom settings for neofetch to be moved to ``~/.config/``.
+
+The ``xbps.d`` folder contains the XBPS mirrors that work best for me where I live. These should be moved to the corresponding ``/etc/xbps.d`` folder.
