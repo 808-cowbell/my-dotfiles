@@ -6,4 +6,8 @@ The ``i3status`` folder contains settings for i3status to be moved to ``~/.confi
 
 The ``neofetch`` folder contains my custom settings for neofetch to be moved to ``~/.config/``.
 
-The ``xbps.d`` folder contains the XBPS mirrors that work best for me where I live. These should be moved to the corresponding ``/etc/xbps.d`` folder.
+The ``xbps.d`` folder contains the XBPS mirrors that work best for me where I live. These should be moved to the corresponding ``/etc/xbps.d/`` directory.
+
+The ``pacman.d`` folder contains the pacman mirrors fastest for me. These should be moved to ``/etc/pacman.d/``.
+
+The ``pulse`` folder contains my PulseAudio configuration. Move these to ``~/.config/pulse/``, create this directory if it doesn't already exist.
