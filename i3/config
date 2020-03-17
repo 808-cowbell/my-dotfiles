@@ -201,8 +201,8 @@ bar {
   }
 }
 
-# start compton
-exec compton
+# start compositor
+exec picom
 
 # remove titlebars
 for_window [class=".*"] border pixel 2
