@@ -2,7 +2,7 @@ The ``xorg.conf.d`` folder contains mouse configuration files for usage with X.o
 
 The ``i3`` folder contains configuration files for the i3 window manager to be moved to ``~/.config/``.
 
-The ``i3status`` folder contains settings for i3status to be moved to ``~/.config/``.
+The ``polybar`` folder contains settings for polybar to be moved to ``~/.config/``.
 
 The ``neofetch`` folder contains my custom settings for neofetch to be moved to ``~/.config/``.
 
