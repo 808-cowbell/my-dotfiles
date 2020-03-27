@@ -1,12 +1,13 @@
 [colors]
-background = ${xrdb:color8:#9ea1a3}
-foreground = ${xrdb:color15:#e3e6ea}
-active = #979b9f
-inactive = #676a6d
-highlight = ${xrdb:color2:#9B9FA5}
-error = ${xrdb:color9:#8C8E91}
+background = ${xrdb:color8:#ffffff}
+foreground = ${xrdb:color15:#ffffff}
+active = ${xrdb:color9:#ffffff} 
+inactive = ${xrdb:color10:#ffffff} 
+highlight = ${xrdb:color2:#ffffff}
+error = ${xrdb:color9:#ffffff}
 
 [bar/wpgtk]
+monitor = DP-4
 width = 100%
 height = 24
 offset-y = 0%
@@ -28,7 +29,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = mononoki Nerd Font Mono:style=Regular:size=9
+font-0 = mononoki Nerd Font Mono:style=Regular:size=9;1
 
 modules-left = i3 xwindow
 modules-center = date
@@ -109,7 +110,7 @@ format-playing-background = ${colors.highlight}
 
 [module/wlan]
 type = internal/network
-interface = wlp4s0
+interface = wlp6s0
 interval = 3.0
 
 format-connected-padding = 1
@@ -124,7 +125,7 @@ ramp-signal-foreground = ${colors.foreground}
 
 [module/eth]
 type = internal/network
-interface = enp2s0
+interface = enp0s31f6
 interval = 3.0
 
 format-connected =  <label-connected>
