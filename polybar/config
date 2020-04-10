@@ -7,9 +7,8 @@ highlight = ${xrdb:color2:#ffffff}
 error = ${xrdb:color9:#ffffff}
 
 [bar/wpgtk]
-monitor = DP-4
 width = 100%
-height = 24
+height = 18 
 offset-y = 0%
 radius = 0.0
 fixed-center = true
@@ -110,7 +109,7 @@ format-playing-background = ${colors.highlight}
 
 [module/wlan]
 type = internal/network
-interface = wlp6s0
+interface = wlp4s0
 interval = 3.0
 
 format-connected-padding = 1

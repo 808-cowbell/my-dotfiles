@@ -34,8 +34,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 15
-    y: 15
+    x: 15 
+    y: 15 
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -100,19 +100,19 @@ window:
 #tabspaces: 8
 
 # Font configuration
-#font:
+font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    #family: monospace
+    family: Inconsolata Nerd Font Mono 
 
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Regular
 
   # Bold font face
   #bold:
@@ -148,7 +148,7 @@ window:
     #style: Bold Italic
 
   # Point size
-  #size: 11.0
+  size: 14.0 
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -183,35 +183,35 @@ window:
 #draw_bold_text_with_bright_colors: true
 
 # Colors (Gruvbox dark)
-#colors:
-#  # Default colors
-#  primary:
-#    # hard contrast: background = '#1d2021'
-#    background: '#0A0C10'
-#    # soft contrast: background = '#32302f'
-#    foreground: '#ebdbb2'
-#
-#  # Normal colors
-#  normal:
-#    black:   '#282828'
-#    red:     '#cc241d'
-#    green:   '#98971a'
-#    yellow:  '#d79921'
-#    blue:    '#458588'
-#    magenta: '#b16286'
-#    cyan:    '#689d6a'
-#    white:   '#a89984'
-#
-#  # Bright colors
-#  bright:
-#    black:   '#928374'
-#    red:     '#fb4934'
-#    green:   '#b8bb26'
-#    yellow:  '#fabd2f'
-#    blue:    '#83a598'
-#    magenta: '#d3869b'
-#    cyan:    '#8ec07c'
-#    white:   '#ebdbb2'
+colors:
+  # Default colors
+  primary:
+    # hard contrast: background = '#1d2021'
+    background: '#0A0C10'
+    # soft contrast: background = '#32302f'
+    foreground: '#ebdbb2'
+
+  # Normal colors
+  normal:
+    black:   '#282828'
+    red:     '#cc241d'
+    green:   '#98971a'
+    yellow:  '#d79921'
+    blue:    '#458588'
+    magenta: '#b16286'
+    cyan:    '#689d6a'
+    white:   '#a89984'
+
+  # Bright colors
+  bright:
+    black:   '#928374'
+    red:     '#fb4934'
+    green:   '#b8bb26'
+    yellow:  '#fabd2f'
+    blue:    '#83a598'
+    magenta: '#d3869b'
+    cyan:    '#8ec07c'
+    white:   '#ebdbb2'
 
 # Visual Bell
 #
