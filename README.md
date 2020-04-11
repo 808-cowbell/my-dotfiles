@@ -1,3 +1,6 @@
+![Screenshot 1](/Screenshots/wall1.png)
+![Screenshot 2](/Screenshots/wall2.png)
+This repo contains my personal configuration files to make PulseAudio sound better, disable mouse acceleration and properly set up my trackpad in X.Org, and make a dynamic i3 rice using wpgtk.
 # Dependencies
 To use these dotfiles properly, you will need to have the following programs installed:
 - brightnessctl
