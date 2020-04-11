@@ -2,8 +2,10 @@
 ![Screenshot 1](/Screenshots/wall1.png)
 ![Screenshot 2](/Screenshots/wall2.png)
 This repo contains my personal configuration files to make PulseAudio sound better, disable mouse acceleration and properly set up my trackpad in X.Org, and make a dynamic i3 rice using wpgtk.
+
 # dependencies
-To use these dotfiles properly, you will need to have the following installed:
+### i3 config
+To use the i3 dotfiles properly, you will need to have the following installed:
 - brightnessctl
 - dmenu
 - i3-gaps (**not** i3wm)
@@ -16,8 +18,19 @@ To use these dotfiles properly, you will need to have the following installed:
 - xbindkeys
 - xfce4-screenshooter
 
-You will also need to install the following fonts, both of which can be found in Nerd Fonts:
+### .xinitrc
+- udisks2
+- udiskie
+- wpgtk
+- xorg-xrdb
+
+### .bashrc
+- wpgtk
+
+### fonts
+You will need to install the following fonts for usage with Polybar and Alacritty respectively, both of which can be found in Nerd Fonts:
 - mononoki Nerd Font Mono
 - InconsolataLGC Nerd Font Mono
+
 # "installation"
 ``xorg.conf.d`` goes to ``/etc/X11/``, all other folders go to ``~/.config/``.
