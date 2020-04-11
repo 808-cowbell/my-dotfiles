@@ -19,7 +19,5 @@ To use these dotfiles properly, you will need to have the following installed:
 You will also need to install the following fonts, both of which can be found in Nerd Fonts:
 - mononoki Nerd Font Mono
 - InconsolataLGC Nerd Font Mono
-# where to move these folders
-``xorg.conf.d`` ----------> ``/etc/X11/`` 
-
-All others ----------> ``~/.config/``
+# "installation"
+``xorg.conf.d`` goes to ``/etc/X11/``, all other folders go to ``~/.config/``.
