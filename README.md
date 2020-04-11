@@ -1,9 +1,20 @@
-The ``xorg.conf.d`` folder contains mouse configuration files for usage with X.org, move these to ``/etc/X11/xorg.conf.d/`` and restart X server to apply changes.
+# Dependencies
+To use these dotfiles properly, you will need to have the following programs installed:
+- brightnessctl
+- dmenu
+- i3-gaps (**not** i3wm)
+- NetworkManager
+- nm-applet
+- pamixer
+- picom
+- PulseAudio
+- wpgtk (make sure to install this properly and add ``wal -R`` to your .xinitrc so as to restore colors & wallpaper on X startup)
+- xbindkeys
+- xfce4-screenshooter
 
-The ``i3`` folder contains configuration files for the i3 window manager to be moved to ``~/.config/``.
-
-The ``polybar`` folder contains settings for polybar to be moved to ``~/.config/``.
-
-The ``neofetch`` folder contains my custom settings for neofetch to be moved to ``~/.config/``.
-
-The ``pulse`` folder contains my PulseAudio configuration. Move these to ``~/.config/pulse/``, create this directory if it doesn't already exist.
+You will also need to install the following fonts, both of which can be found in Nerd Fonts:
+- mononoki Nerd Font Mono
+- InconsolataLGC Nerd Font Mono
+# Where to move these folders
+``xorg.conf.d`` ----------> ``/etc/X11/`` 
+All others ----------> ``~/.config/``
