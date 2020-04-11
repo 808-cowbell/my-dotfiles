@@ -17,4 +17,5 @@ You will also need to install the following fonts, both of which can be found in
 - InconsolataLGC Nerd Font Mono
 # Where to move these folders
 ``xorg.conf.d`` ----------> ``/etc/X11/`` 
+
 All others ----------> ``~/.config/``
