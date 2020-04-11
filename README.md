@@ -17,6 +17,7 @@ To use the i3 dotfiles properly, you will need to have the following installed:
 - wpgtk (make sure to install this properly and add ``wal -R`` to your .xinitrc so as to restore colors & wallpaper on X startup)
 - xbindkeys
 - xfce4-screenshooter
+- xss-lock
 
 ### .xinitrc
 - udisks2
@@ -34,4 +35,5 @@ You will need to install the following fonts for usage with Polybar and Alacritt
 
 # "installation"
 ``xorg.conf.d`` goes to ``/etc/X11/``, all other folders go to ``~/.config/``.
-``.*rc`` files go in your home directory.
+
+``.*rc`` files go in $HOME.
