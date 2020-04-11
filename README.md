@@ -34,3 +34,4 @@ You will need to install the following fonts for usage with Polybar and Alacritt
 
 # "installation"
 ``xorg.conf.d`` goes to ``/etc/X11/``, all other folders go to ``~/.config/``.
+``.*rc`` files go in your home directory.
