@@ -6,8 +6,10 @@ This repo contains my personal configuration files to make PulseAudio sound bett
 # dependencies
 ### i3 config
 To use the i3 dotfiles properly, you will need to have the following installed:
+- Alacritty
 - brightnessctl
 - dmenu
+- fish
 - i3-gaps (**not** i3wm)
 - NetworkManager
 - nm-applet
