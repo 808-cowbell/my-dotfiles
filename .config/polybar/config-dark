@@ -228,7 +228,7 @@ animation-charging-4 = 
 format-charging-background = ${colors.inactive}
 format-charging-foreground = ${colors.background}
 format-discharging-background = ${colors.inactive}
-format-discharging-background = ${colors.background}
+format-discharging-foreground = ${colors.background}
 
 [settings]
 screenchange-reload = true
