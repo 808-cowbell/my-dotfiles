@@ -1,14 +1,14 @@
 [colors]
 background = ${xrdb:color8:#ffffff}
 foreground = ${xrdb:color15:#ffffff}
-active = ${xrdb:color9:#ffffff} 
-inactive = ${xrdb:color10:#ffffff} 
+active = ${xrdb:color1:#ffffff} 
+inactive = ${xrdb:color2:#ffffff} 
 highlight = ${xrdb:color2:#ffffff}
 error = ${xrdb:color9:#ffffff}
 
 [bar/wpgtk]
 width = 100%
-height = 18 
+height = 19 
 offset-y = 0%
 radius = 0.0
 fixed-center = true
@@ -109,7 +109,7 @@ format-playing-background = ${colors.highlight}
 
 [module/wlan]
 type = internal/network
-interface = wlp4s0
+interface = wlp6s0 
 interval = 3.0
 
 format-connected-padding = 1
