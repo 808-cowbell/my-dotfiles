@@ -31,9 +31,7 @@ To use the i3 dotfiles properly, you will need to have the following installed:
 - wpgtk
 
 ### fonts
-You will need to install the following fonts for usage with Polybar and Alacritty respectively, both of which can be found in Nerd Fonts:
-- mononoki Nerd Font Mono
-- InconsolataLGC Nerd Font Mono
+- Iosevka
 
 # "installation"
 ``xorg.conf.d`` goes to ``/etc/X11/``, all other folders go to ``~/.config/``.
