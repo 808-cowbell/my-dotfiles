@@ -4,8 +4,8 @@
 
 set $mod Mod4
 set $alt Mod1
-set_from_resource $coloract color9 
-set_from_resource $colorin color10 
+set_from_resource $coloract color1 
+set_from_resource $colorin color2 
 set_from_resource $white i3wm.color15 
 set_from_resource $split i3wm.color10 
 set_from_resource $bg color8
@@ -50,7 +50,7 @@ bindsym $mod+Return exec --no-startup-id alacritty -e fish
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -nf '$white' -nb '$bg' -sb '$colorin' -sf '$white' -fn 'mononoki Nerd Font-11'
+bindsym $mod+d exec --no-startup-id dmenu_run -nf '$white' -nb '$bg' -sb '$colorin' -sf '$white' -fn 'Iosevka-9'
 
 # change focus
 bindsym $mod+h focus left
