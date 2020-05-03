@@ -34,6 +34,6 @@ To use the i3 dotfiles properly, you will need to have the following installed:
 # installation
 ``.*rc`` files go in $HOME.
 
-``xorg.conf.d`` goes to ``/etc/X11/``
+``xorg.conf.d`` goes to ``/etc/X11/``.
 
 Other files and folders go to ``~/.config/``.
