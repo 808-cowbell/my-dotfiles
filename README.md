@@ -32,6 +32,7 @@ To use the i3 dotfiles properly, you will need to have the following installed:
 
 ### fonts
 - Iosevka
+- Material Icons
 
 # "installation"
 ``xorg.conf.d`` goes to ``/etc/X11/``, all other folders go to ``~/.config/``.

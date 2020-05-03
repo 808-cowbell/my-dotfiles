@@ -8,7 +8,7 @@ set_from_resource $coloract color1
 set_from_resource $colorin color2 
 set_from_resource $white i3wm.color15 
 set_from_resource $split i3wm.color10 
-set_from_resource $bg color8
+set_from_resource $bg color0
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -182,8 +182,8 @@ bindsym $mod+r mode "resize"
 # start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# start compton
-exec --no-startup-id picom
+# start compositor 
+exec --no-startup-id picom --no-dock-shadow
 
 # remove titlebars
 for_window [class=".*"] border pixel 0 
