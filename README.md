@@ -1,7 +1,5 @@
 # transients
-![Screenshot 1](/Screenshots/wall1.png)
-![Screenshot 2](/Screenshots/wall2.png)
-This repo contains my personal configuration files to make PulseAudio sound better, disable mouse acceleration and properly set up my trackpad in X.Org, and make a dynamic i3 rice using wpgtk.
+![Screenshot](/Screenshots/screenshot3.png)
 
 # dependencies
 ### i3 config
@@ -10,13 +8,13 @@ To use the i3 dotfiles properly, you will need to have the following installed:
 - brightnessctl
 - dmenu
 - fish
-- i3-gaps (**not** i3wm)
+- i3-gaps-rounded-git
 - NetworkManager
 - nm-applet
 - pamixer
 - picom
 - PulseAudio
-- wpgtk (make sure to install this properly and add ``wal -R`` to your .xinitrc so as to restore colors & wallpaper on X startup)
+- wpgtk
 - xbindkeys
 - xfce4-screenshooter
 - xss-lock
@@ -32,9 +30,10 @@ To use the i3 dotfiles properly, you will need to have the following installed:
 
 ### fonts
 - Iosevka
+Used for Polybar and Alacritty.
 - Material Icons
-
-# "installation"
-``xorg.conf.d`` goes to ``/etc/X11/``, all other folders go to ``~/.config/``.
-
+Used for Polybar icons that Iosevka doesn't cover.
+# installation
 ``.*rc`` files go in $HOME.
+``xorg.conf.d`` goes to ``/etc/X11/``
+Other files and folders go to ``~/.config/``.

@@ -14,9 +14,17 @@ set_from_resource $bg color0
 # is used in the bar {} block below.
 font pango:monospace 8
 
+# remove titlebars
+for_window [class=".*"] border pixel 0
+
 # add gaps
 gaps outer 0
 gaps inner 4 
+
+# add roundy corners lole
+smart_borders on
+smart_borders no_gaps
+border_radius 4 
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -183,10 +191,7 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # start compositor 
-exec --no-startup-id picom --no-dock-shadow
-
-# remove titlebars
-for_window [class=".*"] border pixel 0 
+exec --no-startup-id picom
 
 # disable middle click paste
 exec --no-startup-id xbindkeys

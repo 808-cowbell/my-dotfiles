@@ -1,5 +1,5 @@
 [colors]
-background = ${xrdb:color0:#ffffff}
+background = ${xrdb:color8:#ffffff}
 foreground = ${xrdb:color15:#ffffff}
 active = ${xrdb:color1:#ffffff} 
 inactive = ${xrdb:color2:#ffffff} 
@@ -13,7 +13,12 @@ offset-y = 0%
 radius = 0.0
 fixed-center = true
 
-background = #00000000 
+; uncomment for opaque bar
+;background = ${colors.background} 
+
+; uncomment for transparent bar
+background = #00000000
+
 foreground = ${colors.foreground}
 
 line-size = 0
@@ -108,7 +113,7 @@ format-playing-background = ${colors.highlight}
 
 [module/wlan]
 type = internal/network
-interface = wlan1 
+interface = wlp6s0 
 interval = 3.0
 
 format-connected-padding = 1
