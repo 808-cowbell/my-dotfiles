@@ -1,40 +1,41 @@
 [colors]
-background = ${xrdb:color8:#ffffff}
+background = ${xrdb:color0:#ffffff}
 foreground = ${xrdb:color15:#ffffff}
 active = ${xrdb:color1:#ffffff} 
 inactive = ${xrdb:color2:#ffffff} 
-highlight = ${xrdb:color2:#ffffff}
+highlight = ${xrdb:color3:#ffffff}
 error = ${xrdb:color9:#ffffff}
 
 [bar/wpgtk]
 width = 100%
-height = 18 
+height = 21
 offset-y = 0%
 radius = 0.0
 fixed-center = true
 
 ; uncomment for opaque bar
-;background = ${colors.background} 
+background = ${colors.background}
 
 ; uncomment for transparent bar
-background = #00000000
+;background = #00000000 
 
 foreground = ${colors.foreground}
 
-line-size = 0
+line-size = 2
 label-line-color = #f00
 
 border-size = 0
-border-color = #00000000
+border-bottom-size = 2
+border-color = ${colors.background}
 
-padding-left = 0
-padding-right = 0
+padding-left = 10
+padding-right = 10
 
 module-margin-left = 0
 module-margin-right = 0
 
 font-0 = Iosevka:style=Regular:size=8;1
-font-1 = Material Icons:style=Regular:size=8;1.75
+font-1 = Material Icons:style=Regular:size=8;2
 
 modules-left = i3 
 modules-center = date
@@ -82,7 +83,7 @@ label-mode-padding = 1
 label-mode-foreground = ${colors.foreground}
 label-mode-background = ${colors.highlight}
 
-label-focused-background = ${colors.active}
+label-focused-underline = ${colors.active}
 label-focused-padding = 1
 label-focused = %name%
 
@@ -92,7 +93,7 @@ label-unfocused = %name%
 label-visible-padding = 1
 label-visible = %name%
 
-label-urgent-background = ${colors.highlight}
+label-urgent-underline = ${colors.highlight}
 label-urgent-padding = 1
 label-urgent = %name%
 
@@ -113,16 +114,17 @@ format-playing-background = ${colors.highlight}
 
 [module/wlan]
 type = internal/network
-interface = wlp6s0 
+interface = wlp4s0
 interval = 3.0
 
 format-connected-padding = 1
+format-connected-underline = ${colors.inactive}
 format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%
 
 format-disconnected =
 
-ramp-signal-0 = 
+ramp-signal-0 = 
 ramp-signal-foreground = ${colors.foreground}
 
 [module/eth]
@@ -166,7 +168,9 @@ interval = 5
 ;   <label-volume> (default)
 ;   <ramp-volume>
 ;   <bar-volume>
-format-volume = <ramp-volume><label-volume>
+format-volume = <ramp-volume> <label-volume>
+format-volume-underline = ${colors.active}
+format-volume-padding = 1
 
 ; Available tags:
 ;   <label-muted> (default)
@@ -178,13 +182,14 @@ format-volume = <ramp-volume><label-volume>
 ;   %percentage% (default)
 ;   %decibels% (unreleased)
 label-volume = %percentage%%
-label-volume-padding = 1
+label-volume-padding = 0
 
 ; Available tokens:
 ;   %percentage% (default)
 ;   %decibels% (unreleased)
 label-muted =  muted
-label-muted-foreground = ${colors.inactive} 
+label-muted-underline = ${colors.active}
+label-muted-foreground = ${colors.active} 
 label-muted-padding = 1
 
 ; Only applies if <ramp-volume> is used
@@ -203,10 +208,13 @@ full-at = 100
 
 format-charging =  <animation-charging> <label-charging>
 format-charging-padding = 1
+format-charging-underline = ${colors.highlight}
 format-discharging-padding = 1
 format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${colors.highlight}
 format-full = <label-full> <ramp-capacity>
 format-full-padding = 1
+format-full-underline = ${colors.highlight}
 
 ramp-capacity-0 = 
 ramp-capacity-1 =  
