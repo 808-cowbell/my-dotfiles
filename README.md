@@ -36,6 +36,6 @@ To use the i3 dotfiles properly, you will need to have the following installed:
 
 ``xorg.conf.d`` goes to ``/etc/X11/``.
 
-``tile-wallpaper.sh`` can be placed anywhere, but make sure that wpg is configured to not set a wallpaper and call ``tile-wallpaper.sh`` from the directory it's placed in.
+``tile-wallpaper.sh`` can be placed anywhere, but read the instructions at the top of the script first.
 
 Other files and folders go to ``~/.config/``.
