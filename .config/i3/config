@@ -11,7 +11,7 @@ set_from_resource $split i3wm.color10
 set_from_resource $bg color0
 
 # set wallpaper
-exec --no-startup-id $HOME/Documents/tile-wallpaper.sh
+exec --no-startup-id $HOME/.config/wpg/tile-wallpaper.sh
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
