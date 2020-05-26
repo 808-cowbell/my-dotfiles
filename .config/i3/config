@@ -4,8 +4,8 @@
 
 set $mod Mod4
 set $alt Mod1
-set_from_resource $coloract color5
-set_from_resource $colorin color6
+set_from_resource $coloract color8
+set_from_resource $colorin color8
 set_from_resource $white i3wm.color15
 set_from_resource $split i3wm.color10
 set_from_resource $bg color0
@@ -18,7 +18,7 @@ exec --no-startup-id $HOME/.config/wpg/tile-wallpaper.sh
 font pango:monospace 8
 
 # remove titlebars
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 2
 
 # add gaps
 gaps outer 0
@@ -50,7 +50,7 @@ bindsym Print exec --no-startup-id xfce4-screenshooter
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty -e fish 
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
