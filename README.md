@@ -1,6 +1,6 @@
 # transients
-![Screenshot](/Screenshots/screenshot6.png)
-
+![Screenshot](/Screenshots/screenshot7.png)
+[Wallpaper source](https://www.reddit.com/r/wallpapers/comments/gq10v2/sunset_over_mt_shasta_5616x3744/)
 # dependencies
 ### i3 config
 To use the i3 dotfiles properly, you will need to have the following installed:
