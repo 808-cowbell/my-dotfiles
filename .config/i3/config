@@ -22,7 +22,7 @@ for_window [class=".*"] border pixel 2
 
 # add gaps
 gaps outer 0
-gaps inner 4
+gaps inner 6
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.

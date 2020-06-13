@@ -1,5 +1,5 @@
 # transients
-![Screenshot](/Screenshots/screenshot7.png)
+![Screenshot](/Screenshots/screenshot8.png)
 [Wallpaper source](https://www.reddit.com/r/wallpapers/comments/gq10v2/sunset_over_mt_shasta_5616x3744/)
 # dependencies
 ### i3 config
