@@ -1,14 +1,10 @@
 # transients
-![Screenshot](/Screenshots/screenshot9.png)
+![Screenshot](screenshot.png)
 # installation
-``.*rc`` files go in $HOME.
+Files in ``Profiles + RCs`` go in your home directory.
 
-``xorg.conf.d`` goes to ``/etc/X11/``.
+Files in ``X Config`` go to ``/etc/X11/``.
 
-``tile-wallpaper.sh`` can be placed anywhere, but read the instructions at the top of the script first.
+Files in ``Shell Scripts`` can be called from everywhere, but make sure to read the comments first.
 
-``lock.sh`` is called from ``.xinitrc`` to lock the screen when the lid is closed.
-
-``config.h`` is used when compiling ``sowm``.
-
-Other files and folders go to ``~/.config/``.
+Finally, files in ``.config`` go to your own config directory.
