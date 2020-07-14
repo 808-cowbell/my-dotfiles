@@ -1,4 +1,5 @@
 #! /bin/sh
+# Note: have wpgtk install its bspwm template before using this, as it calls a shell script created by the template
 
 xsetroot -cursor_name left_ptr &
 sxhkd &
