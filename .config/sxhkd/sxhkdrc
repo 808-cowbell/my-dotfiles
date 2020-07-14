@@ -19,8 +19,8 @@ super + w
 	wpg
 
 # screenshooter
-super + {shift +} p
-	maim {-s} ~/Pictures/Screenshots/$(date +%s).png
+super + {_,shift +} p
+	maim {_,-s} ~/Pictures/Screenshots/$(date +%s).png
 
 # volume controls
 XF86Audio{RaiseVolume,LowerVolume,Mute}
