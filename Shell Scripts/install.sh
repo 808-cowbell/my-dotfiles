@@ -8,7 +8,7 @@
 PACKAGES+="alacritty base base-devel bspwm cowsay dhcpcd dialog efibootmgr "
 PACKAGES+="file-roller firefox git grub gtk-engine-murrine lxappearance maim "
 PACKAGES+="man-pages ntp pavucontrol rhythmbox sudo rofi thunar udiskie vim "
-PACKAGES+="xdg-utils xorg-xinit xorg-xsetroot yay ytop-bin zsh "
+PACKAGES+="xdg-utils xorg-xinit xorg-xsetroot zsh "
 
 # aur packages to be installed on system
 AURPACKAGES+="pfetch polybar wpgtk-git yay ytop-bin "
@@ -51,8 +51,8 @@ setup_timezone () {
 }
 
 setup_locale () {
-    for val in $LOCALES; do
-        echo $val >> /etc/locale.gen
+    for i in "${LOCALES[@]}"; do
+        echo $i >> /etc/locale.gen
     done
     locale-gen
     echo LANG=$LANG >> /etc/locale.conf
