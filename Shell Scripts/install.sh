@@ -44,6 +44,9 @@ USERPERMS="audio,optical,storage,video,wheel"
 # uncomment to install proprietary nvidia graphics drivers
 #PACKAGES+="nvidia nvidia-settings "
 
+# uncomment to install qxl drivers
+#PACKAGES+="xf86-video-qxl "
+
 ## FUNCTIONS
 setup_timezone () {
     ln -sf $TIMEZONE /etc/localtime
