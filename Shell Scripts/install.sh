@@ -28,14 +28,8 @@ GRUBDRIVE=""
 # hostname of machine
 HOSTNAME="sprout"
 
-# password of root account
-ROOTPASS="fart"
-
 # name of user account
 USERNAME="graham"
-
-# password of user account
-USERPASS="fart"
 
 # permissions of user account (separated by comma)
 USERPERMS="audio,optical,storage,video,wheel"
@@ -51,7 +45,7 @@ USERPERMS="audio,optical,storage,video,wheel"
 #PACKAGES+="nvidia nvidia-settings "
 
 ## FUNCTIONS
-set_timezone () {
+setup_timezone () {
     ln -sf $TIMEZONE /etc/localtime
     hwclock --systohc
 }
