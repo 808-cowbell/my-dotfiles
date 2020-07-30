@@ -1,7 +1,6 @@
 #!/bin/bash
 #
-# DO NOT USE THIS INSTALL SCRIPT! I haven't had a chance to test it yet.
-# This is only a proof of concept at the moment.
+# DO NOT USE THIS INSTALL SCRIPT! It hasn't been tested extensively yet.
 #
 ## CONFIGURE THESE VARIABLES BEFORE RUNNING SCRIPT
 # packages to be installed on system
@@ -9,6 +8,9 @@ PACKAGES+="alacritty base base-devel bspwm cowsay dhcpcd dialog efibootmgr "
 PACKAGES+="file-roller firefox git grub gtk-engine-murrine lxappearance maim "
 PACKAGES+="man-pages ntp pavucontrol rhythmbox sudo rofi thunar udiskie vim "
 PACKAGES+="xdg-utils xorg-xinit xorg-xsetroot zsh "
+
+# oh and uh some fonts too
+PACKAGES+="noto-fonts ttf-jetbrains-mono ttf-roboto "
 
 # aur packages to be installed on system
 AURPACKAGES+="pfetch polybar wpgtk-git yay ytop-bin "
@@ -91,6 +93,7 @@ install_aurpkgs () {
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si
+    cd ~
     rm -rf yay
     yay -S $AURPACKAGES
 }
