@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# DO NOT USE THIS INSTALL SCRIPT! It hasn't been tested extensively yet.
+# This install script has not been tested extensively. Use at your own risk.
 #
 ## CONFIGURE THESE VARIABLES BEFORE RUNNING SCRIPT
 # packages to be installed on system
@@ -9,7 +9,7 @@ PACKAGES+="file-roller firefox git grub gtk-engine-murrine lxappearance maim "
 PACKAGES+="man-pages ntp pavucontrol rhythmbox sudo rofi thunar udiskie vim "
 PACKAGES+="xdg-utils xorg-xinit xorg-xsetroot zsh "
 
-# oh and uh some fonts too
+# fonts
 PACKAGES+="noto-fonts ttf-jetbrains-mono ttf-roboto "
 
 # aur packages to be installed on system
