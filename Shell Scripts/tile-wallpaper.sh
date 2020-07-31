@@ -21,7 +21,7 @@ h=$(xrandr | fgrep '*' | awk '{print $1}' | sed -e 's/x/ /g' | cut -f2 -d' ')
 # Compares width and height of cached wallpaper to monitor resolution
 if (( $(identify -format "%w" "$(< "${HOME}/.cache/wal/wal")") < $w )) && (( $(identify -format "%h" "$(< "${HOME}/.cache/wal/wal")") < $h ))
 then
-	feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"
+    feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"
 else
-	feh --bg-fill "$(< "${HOME}/.cache/wal/wal")"
+    feh --bg-fill "$(< "${HOME}/.cache/wal/wal")"
 fi
