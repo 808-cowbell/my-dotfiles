@@ -3,11 +3,12 @@
 # This is my install script that I use to set up an Arch system. It does not
 # possess the capability to format and partition disks yet. It was designed only
 # to suit my needs, I recommend you either use a different script, or modify the
-# code to your liking. 
+# code to your liking. It is designed to be used in arch-chroot after the
+# pacstrap command, and then again after rebooting into the user account.
 #
 # THIS SCRIPT HAS NOT BEEN TESTED EXTENSIVELY AND MAY CAUSE SERIOUS DAMAGE.
 # Please proceed with caution.
-#
+
 ## CONFIGURE THESE VARIABLES BEFORE RUNNING SCRIPT
 # packages to be installed on system
 PACKAGES+="alacritty base base-devel bspwm cowsay dhcpcd dialog efibootmgr "
@@ -110,7 +111,6 @@ setup_dotfiles () {
     mkdir -p ~/.config/wpg/templates
     cp transients/Shell\ Scripts/tile-wallpaper.sh ~/.config/wpg/templates
     cp transients/Profiles\ +\ RCs/.* ~
-    echo "Sudo needed to copy files to /etc!"
     sudo mkdir -p /etc/X11/xorg.conf.d
     sudo cp transients/X\ Config/*.conf /etc/X11/xorg.conf.d
     echo "Not deleting transients directory, you may remove it yourself."
@@ -129,7 +129,7 @@ if [ $VERIFY == "yes" ]; then
         echo "Setting up accounts..."     ; setup_accounts
         echo "Installing GRUB..."         ; install_grub
         echo "The first stage of installation is complete!"
-        echo "Log in to your user account, then open the installer again."
+        echo "Reboot, log into user account, then open the installer again."
     else
         echo "Beginning second stage of install procedure!"
         echo "Installing AUR packages..." ; install_aurpkgs
