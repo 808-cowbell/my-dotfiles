@@ -14,7 +14,7 @@
 PACKAGES+="alacritty base base-devel bspwm cowsay dhcpcd dialog efibootmgr "
 PACKAGES+="file-roller firefox git grub gtk-engine-murrine lxappearance maim "
 PACKAGES+="man-pages ntp pavucontrol rhythmbox sudo rofi thunar udiskie vim "
-PACKAGES+="xdg-utils xorg-xinit xorg-xsetroot zsh "
+PACKAGES+="xdg-utils xorg-server xorg-xinit xorg-xsetroot zsh "
 
 # fonts
 PACKAGES+="noto-fonts ttf-jetbrains-mono ttf-roboto "
