@@ -1,6 +1,12 @@
 #!/bin/bash
 #
-# This install script has not been tested extensively. Use at your own risk.
+# This is my install script that I use to set up an Arch system. It does not
+# possess the capability to format and partition disks yet. It was designed only
+# to suit my needs, I recommend you either use a different script, or modify the
+# code to your liking. 
+#
+# THIS SCRIPT HAS NOT BEEN TESTED EXTENSIVELY AND MAY CAUSE SERIOUS DAMAGE.
+# Please proceed with caution.
 #
 ## CONFIGURE THESE VARIABLES BEFORE RUNNING SCRIPT
 # packages to be installed on system
@@ -111,20 +117,26 @@ setup_dotfiles () {
 }
 
 ## INSTALLATION
-#if [ $(id -u) = 0 ]; then
-#    echo "Beginning first stage of install procedure!"
-#    echo "Setting time..."            ; setup_timezone
-#    echo "Setting up locales..."      ; setup_locale
-#    echo "Setting hostname..."        ; setup_hosts
-#    echo "Installing packages..."     ; install_packages
-#    echo "Setting up accounts..."     ; setup_accounts
-#    echo "Installing GRUB..."         ; install_grub
-#    echo "The first stage of installation is complete!"
-#    echo "Reboot, log in to your user account, then open the installer again."
-#else
-#    echo "Beginning second stage of install procedure!"
-#    echo "Installing AUR packages..." ; install_aurpkgs
-#    echo "Setting up dotfiles..."     ; setup_dotfiles
-#    echo "System installation complete!"
-#    echo "Configure wpgtk after starting bspwm."
-#fi
+echo "This script hasn't been tested extensively and may cause serious damage."
+read -p "Having read the code, do you still wish to continue? [yes/no] " VERIFY
+if [ $VERIFY == "yes" ]; then
+    if [ $(id -u) = 0 ]; then
+        echo "Beginning first stage of install procedure!"
+        echo "Setting time..."            ; setup_timezone
+        echo "Setting up locales..."      ; setup_locale
+        echo "Setting hostname..."        ; setup_hosts
+        echo "Installing packages..."     ; install_packages
+        echo "Setting up accounts..."     ; setup_accounts
+        echo "Installing GRUB..."         ; install_grub
+        echo "The first stage of installation is complete!"
+        echo "Log in to your user account, then open the installer again."
+    else
+        echo "Beginning second stage of install procedure!"
+        echo "Installing AUR packages..." ; install_aurpkgs
+        echo "Setting up dotfiles..."     ; setup_dotfiles
+        echo "System installation complete!"
+        echo "Configure wpgtk after starting bspwm."
+    fi
+else
+    echo "Exiting script."
+fi
