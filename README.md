@@ -1,7 +1,7 @@
 # transients
 ![Screenshot](screenshot.png)
 # installation
-Files in ``Profiles + RCs`` go in your home directory.
+Files in ``Other Dotfiles`` go in your home directory.
 
 Files in ``X Config`` go to ``/etc/X11/``.
 
