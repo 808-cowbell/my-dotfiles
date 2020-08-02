@@ -20,7 +20,7 @@ super + w
 
 # screenshooter
 super + {_,shift +} p
-	maim {_,-s} ~/Pictures/Screenshots/$(date +%s).png
+	maim -u {_,-s} ~/Pictures/Screenshots/$(date +%s).png
 
 # volume controls
 XF86Audio{RaiseVolume,LowerVolume,Mute}
