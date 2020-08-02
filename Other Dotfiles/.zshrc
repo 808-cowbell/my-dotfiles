@@ -11,7 +11,7 @@ zstyle :compinstall filename '/home/graham/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-#PROMPT="%~ %F{1}❯%f%F{3}❯%f%F{2}❯%f "
+bindkey '^R' history-incremental-search-backward
 PROMPT="%~ > "
 (cat $HOME/.config/wpg/sequences &)
 export PF_INFO='title os host kernel shell uptime pkgs memory'
