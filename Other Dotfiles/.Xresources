@@ -1,0 +1,13 @@
+! font configuration
+Xft.autohint: 0
+Xft.antialias: 1
+Xft.hunting: 1
+Xft.hintstyle: hintslight
+Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+! urxvt configuration
+URxvt.font: xft:JetBrainsMono Nerd Font:size=12
+URxvt.internalBorder: 50
+URxvt.scrollBar: false
