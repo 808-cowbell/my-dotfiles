@@ -1,0 +1,85 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	urxvt
+
+# program launcher
+super + d
+	rofi -show run
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# wallpaper setter
+super + w
+	wpg
+
+# screenshooter
+super + {_,shift +} p
+	maim -u {_,-s} ~/Pictures/Screenshots/$(date +%s).png
+
+# volume controls
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+	pamixer {-i,-d,-t} 10
+XF86AudioMicMute
+	pamixer --default-source -t
+
+# brightness controls
+XF86MonBrightness{Up,Down}
+	brightnessctl s {+10%,10%-}
+
+#
+# berry hotkeys
+#
+
+super + alt + q
+    pkill x
+
+super + alt + r
+    ./.config/berry/autostart
+
+super + {h, j, k, l}
+    berryc window_move {-50 0, 0 50, 0 -50, 50 0}
+
+super + shift +  {h, j, k, l}
+    berryc window_resize {-50 0, 0 50, 0 -50, 50 0}
+
+alt + ~button1
+    berryc resize_mask
+
+super + {1-9}
+    berryc switch_workspace {0-9}
+
+super + shift + {1-9}
+    berryc send_to_workspace {0-9}
+
+super + m
+    berryc window_monocle
+
+super + f
+    berryc fullscreen
+
+super +  p
+    berryc snap_right
+
+super + {i,o} 
+    berryc snap_{left,right}
+
+super + n
+    berryc toggle_decorations
+
+super + Tab
+    berryc cycle_focus
+
+super + q
+    berryc window_close
+
+super + c
+    berryc window_center
+
+~button1
+    berryc pointer_focus

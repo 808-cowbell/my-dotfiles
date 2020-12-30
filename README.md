@@ -1,5 +1,5 @@
 # transients
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.jpg)
 # installation
 Files in ``Other Dotfiles`` go in your home directory.
 
