@@ -1,4 +1,4 @@
-# transients
+# my-dotfiles
 ![Screenshot](screenshot.jpg)
 Welcome to my dotfiles repo!
 # installation
