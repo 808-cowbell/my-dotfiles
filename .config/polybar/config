@@ -1,14 +1,14 @@
 [colors]
 background = ${xrdb:color0:#ffffff}
-foreground = ${xrdb:color15:#ffffff}
-active = ${xrdb:color1:#ffffff} 
-inactive = ${xrdb:color2:#ffffff} 
-highlight = ${xrdb:color3:#ffffff}
-error = ${xrdb:color9:#ffffff}
+foreground = ${xrdb:color7:#ffffff}
+active =     ${xrdb:color1:#ffffff} 
+inactive =   ${xrdb:color2:#ffffff} 
+highlight =  ${xrdb:color3:#ffffff}
+error =      ${xrdb:color9:#ffffff}
 
 [bar/plantbar]
-;width = 540
-height = 30
+bottom = true
+height = 38
 radius = 0
 offset-y = 0
 offset-x = 0
@@ -25,34 +25,36 @@ label-line-color = #f00
 padding-left = 5
 padding-right = 5
 
-module-margin-left = 0
-module-margin-right = 0
+module-margin = 1
 
-font-0 = JetBrainsMono Nerd Font:style=Regular:size=9;3
-font-1 = Material Icons:style=Regular:size=9;3
+font-0 = SF Mono:style=Regular:size=9;3
+font-1 = Noto Sans Mono CJK JP:style=Regular:size=9;4
 
-modules-left = date
-modules-center =
-modules-right = cpu memory pulseaudio wlan
+modules-left = bspwm
+modules-center = date cmus
+modules-right = pulseaudio wlan
 
 tray-position = none
 tray-padding = 10
 tray-background = ${colors.inactive}
 
-[module/cpu]
-type = internal/cpu
-format =   <label>
-format-padding = 1
+[module/cmus]
+! this can be found at https://github.com/mikeri/polycmus
 
-; Seconds to sleep between updates
-; Default: 1
-interval = 0.5
+type = custom/script
 
-[module/memory]
-type = internal/memory
-format-padding = 1
-format =   <label>
-label = %gb_used%
+format-background = ${colors.highlight}
+format-padding = 2
+
+exec = ~/.config/polybar/cmus.sh
+exec-if = pgrep -x cmus
+interval = 1
+
+click-left = cmus-remote --pause
+scroll-down = cmus-remote --next
+scroll-up = cmus-remote --prev
+
+label-maxlen = 100
 
 [module/xwindow]
 type = internal/xwindow
@@ -78,34 +80,6 @@ label-empty = %index%
 label-empty-foreground = ${colors.foreground}
 label-empty-padding = 1
 
-[module/i3]
-type = internal/i3
-format = <label-mode><label-state>
-index-sort = true
-wrapping-scroll = false
-fuzzy-matching = true
-
-; Only show workspaces on the same output as the bar
-pin-workspaces = true
-
-label-mode-padding = 1
-label-mode-foreground = ${colors.foreground}
-label-mode-background = ${colors.highlight}
-
-label-focused-underline = ${colors.active}
-label-focused-padding = 1
-label-focused = %name%
-
-label-unfocused-padding = 1
-label-unfocused = %name%
-
-label-visible-padding = 1
-label-visible = %name%
-
-label-urgent-underline = ${colors.highlight}
-label-urgent-padding = 1
-label-urgent = %name%
-
 [module/mpd]
 type = internal/mpd
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
@@ -128,35 +102,21 @@ interval = 3.0
 
 format-connected-padding = 1
 format-connected-underline = ${colors.inactive}
-format-connected = <ramp-signal> <label-connected>
+format-connected = WLAN: <label-connected>
 label-connected = %essid%
 
-format-disconnected =  WLAN disconnected
-
-ramp-signal-0 = 
-ramp-signal-foreground = ${colors.foreground}
-
-[module/eth]
-type = internal/network
-interface = enp0s31f6
-interval = 3.0
-
-format-connected =  <label-connected>
-format-connected-padding = 1
-format-connected-underline = ${colors.inactive}
-label-connected = %local_ip%
-
+format-disconnected = WLAN: disconnected
 
 [module/date]
 type = internal/date
 interval = 5
 
-date = "%d %b %Y, "
+date = "%b %d, "
 time = %I:%M %p
 
 format-padding = 1
 
-label = %time%
+label = %date%%time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -177,7 +137,7 @@ interval = 5
 ;   <label-volume> (default)
 ;   <ramp-volume>
 ;   <bar-volume>
-format-volume = <ramp-volume> <label-volume>
+format-volume = VOL: <label-volume>
 format-volume-underline = ${colors.active}
 format-volume-padding = 1
 
@@ -190,60 +150,25 @@ format-volume-padding = 1
 ; Available tokens:
 ;   %percentage% (default)
 ;   %decibels% (unreleased)
-label-volume = %percentage%%
+label-volume = %percentage%
 label-volume-padding = 0
 
 ; Available tokens:
 ;   %percentage% (default)
 ;   %decibels% (unreleased)
-label-muted =  muted
+label-muted = VOL: muted
 label-muted-underline = ${colors.active}
 label-muted-foreground = ${colors.active} 
 label-muted-padding = 1
 
-; Only applies if <ramp-volume> is used
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-
 ; Right and Middle click (unreleased)
 click-right = pavucontrol &
-
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = ADP1
-full-at = 100
-
-format-charging =  <animation-charging>  <label-charging>
-format-charging-padding = 2
-format-charging-underline = ${colors.highlight}
-format-discharging-padding = 2
-format-discharging = <ramp-capacity>  <label-discharging>
-format-discharging-underline = ${colors.highlight}
-format-full = <label-full>  <ramp-capacity>
-format-full-padding = 2
-format-full-underline = ${colors.highlight}
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-
-animation-charging-foreground = ${colors.foreground}
-animation-charging-framerate = 500
-animation-charging-0 = 
-animation-charging-1 =  
-animation-charging-2 =  
-animation-charging-3 = 
-animation-charging-4 =  
 
 [settings]
 screenchange-reload = true
 
 [global/wm]
-margin-top = 5
+margin-top = 0
 margin-bottom = 0
 
 ; vim:ft=dosini

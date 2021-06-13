@@ -1,7 +1,8 @@
 #!/bin/sh
-$HOME/.config/wpg/wp_init.sh
-$HOME/.config/wpg/tile-wallpaper.sh
-xbindkeys -p
+/usr/libexec/gsd-xsettings &
+./.fehbg
+wal -Rt
+dunst &
 udiskie &
-xss-lock ~/.config/i3/lock.sh &
-exec bspwm
+picom &
+exec dbus-launch --exit-with-x11 bspwm

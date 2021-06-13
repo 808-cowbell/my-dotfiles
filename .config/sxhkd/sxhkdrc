@@ -4,19 +4,19 @@
 
 # terminal emulator
 super + Return
-	urxvt
+	kitty
 
-# program launcher
-super + d
-	rofi -show run
+# launch music player
+super + c
+        kitty -e cmus
+
+# program launcher, window switcher
+super + {d,w}
+	rofi -show {drun,window}
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
-
-# wallpaper setter
-super + w
-	wpg
 
 # screenshooter
 super + {_,shift +} p
@@ -139,5 +139,5 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # rotate tree
-super + shift + {d,a}
+super + shift + {i,o}
 	bspc node @/ -C {forward,backward}
