@@ -13,9 +13,9 @@ bspc config borderless_monocle      false
 bspc config gapless_monocle         false
 bspc config pointer_motion_interval 7
 
-bspc rule -a feh                                  state=floating
-bspc rule -a mpv                                  state=floating
+bspc rule -a feh                                   state=floating
+bspc rule -a mpv                                   state=floating
 bspc rule -a Org.gnome.Nautilus:org.gnome.Nautilus state=floating
-bspc rule -a Wpg                                  state=floating
+bspc rule -a Wpg                                   state=floating
 
 $HOME/.config/polybar/launch.sh
